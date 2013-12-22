@@ -9,9 +9,13 @@ public class Tester {
 	public static void main(String[] args){
 		int[] ds = {2,3,4,};
 		
-		for (int d : ds)
-			if (runTest(d, false))
-				System.out.println("Test ended successfully for d="+d+"\n");
+		for (int d : ds){
+			if (runTest(d, true))
+				System.out.println("Test ended successfully for d="+d+"\n----------------------------");
+			else
+				System.out.println("Error occured during test for d="+d+"\n--------------------------");
+		}
+			
 	}
 	
 	public static boolean runTest(int d, boolean strict){
